@@ -4,19 +4,16 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-    <persistence-unit name="Insta">
+    <persistence-unit name="Search">
         <description>
             Persistence unit for Hibernate User Guide
         </description>
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>com.yasar.entity.Comment</class>
-        <class>com.yasar.entity.Follow</class>
-        <class>com.yasar.entity.Like</class>
-        <class>com.yasar.entity.Post</class>
-        <class>com.yasar.entity.User</class>
-        <class>com.yasar.entity.UserProfile</class>
+        <class>com.yasar.entity.Category</class>
+        <class>com.yasar.entity.Product</class>
+
 
 
         <properties>
@@ -24,7 +21,7 @@
                       value="org.postgresql.Driver" />
 
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:postgresql://localhost:5432/InstagramDB" />
+                      value="jdbc:postgresql://localhost:5432/DBArama" />
 
             <property name="jakarta.persistence.jdbc.user"
                       value="postgres" />

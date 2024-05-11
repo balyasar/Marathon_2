@@ -1,0 +1,28 @@
+package com.yasar.utility;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data // get, set, toString
+@AllArgsConstructor // parametreli constructorların tümü
+@NoArgsConstructor // default constructor
+@Builder
+public class Response<T> {
+    /**
+     * 200 -> Başarılı
+     * 400 -> Başarısız - Kullanıcı Hatalı
+     * 500 -> Başarısız - Program Kaynaklı
+     */
+    int statusCode;
+    /**
+     * Başarılı ise olumlu mesajlar
+     * Başarısız ise nedeni açıklamalı olarak belirtilen mesajlar
+     */
+    String message;
+    /**
+     * Eğer başarılı bir şekilde sonlanmış ise kullanıcıya iletilecek bilgi datası.
+     */
+    T data;
+}
